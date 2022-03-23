@@ -55,6 +55,7 @@ app.use(async (ctx) => {
     }
     ctx.response.body = 'OK';
   }
+  ctx.response.body = 'OK';
 });
 const PORT = process.env.PORT || 7070;
 const server = http.createServer(app.callback()).listen(PORT);
