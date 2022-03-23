@@ -12,12 +12,12 @@ app.use(koaBody({
 
 let tickets = [
   {
-  'name': 'Починить принтер',
-  'description': 'В комнате 101 сломался принтер, на котором мы печатаем листовки - не работает бумагоприемник',
-  'status': 'false',
-  'created': '1647952489339',
-  'id': 'l124d2t7'
-  },
+  "name": "Починить принтер",
+  "description": "В комнате 101 сломался принтер, на котором мы печатаем листовки - не работает бумагоприемник",
+  "status": "false",
+  "created": "1647952489339",
+  "id": "l124d2t7"
+  }
 ];
 
 app.use(async (ctx) => {
@@ -33,7 +33,7 @@ app.use(async (ctx) => {
     console.log(tickets);
   }
   if (ctx.request.querystring === 'allTickets') {
-    ctx.response.body = JSON.stringify(tickets);
+    ctx.response.body = tickets;
   }
   if (ctx.request.querystring === 'editTicket') {
     let ticketToRemove = tickets.findIndex((element) => element.id === ctx.request.body.id);
