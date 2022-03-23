@@ -5,11 +5,6 @@ const koaBody = require('koa-body');
 
 const app = new Koa();
 
-app.use(koaBody({
-  urlencoded: true,
-  multipart: true
-}));
-
 let tickets = [
   {
   "name": "Починить принтер",
@@ -19,6 +14,13 @@ let tickets = [
   "id": "l124d2t7"
   }
 ]
+
+app.use(koaBody({
+  urlencoded: true,
+  multipart: true
+}));
+
+
 app.use(async (ctx) => {
   
   ctx.response.set({
