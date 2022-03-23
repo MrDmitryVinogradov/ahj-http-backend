@@ -34,6 +34,7 @@ app.use(async (ctx) => {
     console.log(tickets);
   }
   if (ctx.request.querystring == 'allTickets') {
+    console.log(ctx.request);
     ctx.response.body = JSON.stringify(tickets);
   }
   if (ctx.request.querystring === 'editTicket') {
