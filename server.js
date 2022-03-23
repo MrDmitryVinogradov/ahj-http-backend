@@ -18,8 +18,7 @@ let tickets = [
   "created": "1647952489339",
   "id": "l124d2t7"
   }
-];
-
+]
 app.use(async (ctx) => {
   
   ctx.response.set({
