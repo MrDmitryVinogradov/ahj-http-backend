@@ -31,8 +31,8 @@ app.use(async (ctx) => {
     ctx.response.body = 'OK';
     console.log(tickets);
   }
-  if (ctx.request.querystring === 'allTickets') {
-    ctx.response.body = tickets;
+  if (ctx.request.querystring == 'allTickets') {
+    ctx.response.body = JSON.stringify(tickets);
   }
   if (ctx.request.querystring === 'editTicket') {
     let ticketToRemove = tickets.findIndex((element) => element.id === ctx.request.body.id);
